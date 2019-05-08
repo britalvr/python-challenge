@@ -7,8 +7,6 @@ voter_id = []
 county = []
 candidate_votes = []
 
-output_path = os.path.join('pypolltxt.txt')
-
 csvpath = os.path.join('election_data.csv')
 
 with open(csvpath, newline='') as csvfile:
@@ -35,16 +33,17 @@ correy_votes = (candidate_votes.count("Correy"))
 li_votes = (candidate_votes.count("Li"))
 otooley_votes = (candidate_votes.count("O'Tooley"))
 total_votes
-
-print("Election Results")
-print("----------------------------")
-print("Total votes: " + str(len(voter_id)))
-print("----------------------------")
-print("Khan: " + str(int((khan_votes/total_votes)*100)) + "% (" + str(khan_votes) + ")")
-print("Correy: " + str(int((correy_votes/total_votes)*100)) + "% (" + str(correy_votes) + ")")
-print("Li: " + str(int((li_votes/total_votes)*100)) + "% (" + str(li_votes) + ")")
-print("O'Tooley: " + str(int((otooley_votes/total_votes)*100)) + "% (" + str(otooley_votes) + ")")
-print("----------------------------")
-print("Winner:" + "Khan" )
-print("-----------------------------")
+with open("test.txt", "w+") as file:
+        file.write("Test")
+        file.write("Election Results")
+        file.write("----------------------------")
+        file.write("Total votes: " + str(len(voter_id)))
+        file.write("----------------------------")
+        file.write("Khan: " + str(int((khan_votes/total_votes)*100)) + "% (" + str(khan_votes) + ")")
+        file.write("Correy: " + str(int((correy_votes/total_votes)*100)) + "% (" + str(correy_votes) + ")")
+        file.write("Li: " + str(int((li_votes/total_votes)*100)) + "% (" + str(li_votes) + ")")
+        file.write("O'Tooley: " + str(int((otooley_votes/total_votes)*100)) + "% (" + str(otooley_votes) + ")")
+        file.write("----------------------------")
+        file.write("Winner:" + "Khan" )
+        file.write("-----------------------------")
 
