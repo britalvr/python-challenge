@@ -7,6 +7,8 @@ voter_id = []
 county = []
 candidate_votes = []
 
+output_path = os.path.join('pypolltxt.txt')
+
 csvpath = os.path.join('election_data.csv')
 
 with open(csvpath, newline='') as csvfile:
@@ -45,3 +47,4 @@ print("O'Tooley: " + str(int((otooley_votes/total_votes)*100)) + "% (" + str(oto
 print("----------------------------")
 print("Winner:" + "Khan" )
 print("-----------------------------")
+

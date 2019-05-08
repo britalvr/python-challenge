@@ -8,6 +8,8 @@ import math
 
 csvpath = os.path.join('budget_data.csv') 
 
+output_path = os.path.join('pybanktxt.txt')
+
 # Module used for reading csv files
 with open(csvpath, newline='') as csvfile:
 
@@ -61,3 +63,4 @@ print("Total: "+"$"+str(totalamount))
 print("Average Change: "+str(round(averagechange)))
 print("Greatest Increase in Profits: "+str(greatest_increase_month)+" ($"+str(greatest_increase)+")")
 print("Greatest Decrease in Profits: "+str(greatest_decrease_month)+" ($"+str(greatest_decrease)+")")
+
