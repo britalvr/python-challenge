@@ -8,7 +8,6 @@ import math
 
 csvpath = os.path.join('budget_data.csv') 
 
-output_path = os.path.join('pybanktxt.txt')
 
 # Module used for reading csv files
 with open(csvpath, newline='') as csvfile:
@@ -56,11 +55,13 @@ with open(csvpath, newline='') as csvfile:
            greatest_decrease_month= row[0]     
 
 averagechange = totalchange/((total_months)-1) 
-print("Financial Analysis")  
-print("-----------------------")
-print("Total Months: "+str(total_months))
-print("Total: "+"$"+str(totalamount))
-print("Average Change: "+str(round(averagechange)))
-print("Greatest Increase in Profits: "+str(greatest_increase_month)+" ($"+str(greatest_increase)+")")
-print("Greatest Decrease in Profits: "+str(greatest_decrease_month)+" ($"+str(greatest_decrease)+")")
+with open("pybanktxt.txt", "w+") as file:
+    file.write("Test\n")
+    file.write("Financial Analysis\n")  
+    file.write("-----------------------\n")
+    file.write("Total Months: "+str(total_months) + "\n")
+    file.write("Total: "+"$"+str(totalamount) + "\n")
+    file.write("Average Change: "+str(round(averagechange)) + "\n")
+    file.write("Greatest Increase in Profits: "+str(greatest_increase_month)+" ($"+str(greatest_increase)+")\n")
+    file.write("Greatest Decrease in Profits: "+str(greatest_decrease_month)+" ($"+str(greatest_decrease)+"))\n")
 
